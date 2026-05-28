@@ -19,11 +19,11 @@ abtBckBtn.addEventListener("click", function () {
 
     learnElement.style.display = "none";
 
-   window.scrollTo({ 
-    top: 0, 
-    behavior: "smooth"
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
 
-   });
+    });
 
 
 });

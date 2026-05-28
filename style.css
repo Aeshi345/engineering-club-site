@@ -53,7 +53,7 @@ nav ul {
 
     text-align: center;
 
-    img { 
+    img {
 
         width: 400px;
         border-radius: 10px;
@@ -71,4 +71,9 @@ nav ul {
     align-items: center;
 
     text-align: center;
+}
+
+.learnMore h1 {
+
+    font-size: 100px;
 }
