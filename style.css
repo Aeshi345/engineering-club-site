@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* NAVBAR */
+
+nav {
+    background-color: #1f2937;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background-color: #2563eb;
+    color: white;
+}
+
+.hero button {
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+/* MISSION SECTION */
+
+.mission {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    img { 
+
+        width: 400px;
+        border-radius: 10px;
+    }
+}
+
+/* LEARN MORE SECTION */
+#learnElmnt {
+
+    display: none;
+
+    min-height: 25vh;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
