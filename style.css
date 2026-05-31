@@ -24,6 +24,18 @@ nav ul {
     list-style: none;
 }
 
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    text-decoration: underline;
+}
+
 /* HERO SECTION */
 
 .hero {
@@ -31,7 +43,7 @@ nav ul {
 
     padding: 100px 20px;
 
-    background-color: #2563eb;
+    background-color: #0d3488;
     color: white;
 }
 
@@ -44,6 +56,12 @@ nav ul {
     font-size: 16px;
 
     cursor: pointer;
+}
+
+.hero button:hover { 
+
+background-color: #779ff5;
+color: #ffffff;
 }
 
 /* MISSION SECTION */
@@ -62,18 +80,19 @@ nav ul {
 
 /* LEARN MORE SECTION */
 #learnElmnt {
-
     display: none;
-
-    min-height: 25vh;
 
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
-.learnMore h1 {
+#learnElmnt img {
+    width: 400px;
+    border-radius: 10px;
+}
 
+
+.learnMore h1 { 
     font-size: 100px;
 }
