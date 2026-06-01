@@ -157,7 +157,7 @@ color: #ffffff;
 
 .dropdown button { 
 
-    background-color: #ffffff;
+    background-color: #dddddd;
     color: black;
     padding: 10px 15px;
     border: none;
@@ -195,6 +195,7 @@ color: #ffffff;
     display: inline-block;
     position: relative;
     min-width: 25px;
+    
 }
 
 .dropdownMenu:hover .dropdown-content {
@@ -202,7 +203,7 @@ color: #ffffff;
 }
 
 .dropdownMenu:hover button {
-    background-color: #cccccc;
+    background-color: #bbbbbb;
 }
 
 .howToJoin { 
