@@ -171,23 +171,45 @@ color: #ffffff;
 }
 
 .gallery {
-
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
     background-color: lightblue;
 }
 
-.gallery h1 { 
-
+.gallery h1 {
     font-size: 85px;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    letter-spacing: 0.03em;
 }
 
-.gallery img { 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
-    margin: 20px 0;
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.14);
 }
 
 .gallery p {
@@ -258,6 +280,7 @@ color: #ffffff;
 
 .eventCard:hover {
     transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.14);
 }
 
 .eventCard a:hover {
@@ -289,18 +312,275 @@ color: #ffffff;
 
 .howToJoin { 
     background-color: lightblue;
-    text-align: center;
     padding: 60px 20px;
-}
-
-.howToJoin ol {
-    display: inline-block;
-    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .howToJoin h1 { 
-
     font-size: 85px;
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: #1f2937;
+    letter-spacing: 0.03em;
+}
+
+.howToJoin .intro {
+    text-align: center;
+    font-size: 20px;
+    color: #4b5563;
+    margin: 0 0 60px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.joinStepsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.joinCard {
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.joinCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cardIcon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.iconNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0d3488 0%, #1f5fa8 100%);
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.joinCard h2 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    color: #1f2937;
+    text-align: center;
+}
+
+.cardSubtitle {
+    text-align: center;
+    color: #0d3488;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    font-size: 16px;
+}
+
+.joinList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step-counter;
+}
+
+.joinList li {
+    counter-increment: step-counter;
+    margin-bottom: 18px;
+    padding-left: 35px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.joinList li:before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: #e0e7ff;
+    color: #0d3488;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.joinCard:hover .joinList li:before {
+    background-color: #0d3488;
+    color: white;
+}
+
+.smeCard {
+    border-top: 4px solid #0d3488;
+}
+
+.clubCard {
+    border-top: 4px solid #10b981;
+}
+
+.clubCard .cardIcon .iconNumber {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.clubCard .cardSubtitle {
+    color: #10b981;
+}
+
+.clubCard .joinList li:before {
+    background-color: #d1fae5;
+    color: #10b981;
+}
+
+.clubCard:hover .joinList li:before {
+    background-color: #10b981;
+    color: white;
+}
+
+.smeLink {
+    color: #0d3488;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #0d3488;
+    transition: all 0.2s ease;
+}
+
+.smeLink:hover {
+    color: #1f5fa8;
+    border-bottom-color: #1f5fa8;
+}
+
+/* LIGHTBOX GALLERY */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: 32px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.lightbox-nav:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: 10px;
+}
+
+.lightbox-next {
+    right: 10px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .contact {
@@ -321,6 +601,41 @@ color: #ffffff;
     line-height: 1.6;
 }
 
+.videoSection {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.videoSection h1 { 
+font-size:80px;
+}
+
+.videoSection video {
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.videoSection a {
+    display: block;
+
+    width: fit-content;
+
+    margin: 20px auto 0 auto;
+
+    background-color: #0d3488;
+    color: white;
+
+    padding: 15px 25px;
+
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.videoSection a:hover {
+    background-color: #779ff5;
+}
+
 footer {
     background-color: #1f2937;
     color: white;
@@ -330,3 +645,4 @@ footer {
     padding: 30px;
     margin-top: 60px;
 }
+

@@ -29,6 +29,8 @@
 
        <h1>Gallery</h1>
 
+       <div class="gallery-grid"> 
+
         <img src = "images/Gallery1.jpeg" alt="Engineering Club">
         <img src = "images/Gallery2.jpg" alt="Engineering Club">
         <img src = "images/Gallery3.jpg" alt="Engineering Club">
@@ -61,7 +63,25 @@
         <img src = "images/Gallery30.jpg" alt="Engineering Club">
         <img src = "images/Gallery31.jpg" alt="Engineering Club">
         <img src = "images/Gallery32.jpg" alt="Engineering Club">
+        </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            
+            <button class="lightbox-nav lightbox-prev">&#10094;</button>
+            
+            <img id="lightbox-image" src="" alt="Gallery Image" class="lightbox-img">
+            
+            <button class="lightbox-nav lightbox-next">&#10095;</button>
+            
+            <div class="lightbox-counter">
+                <span id="current-image">1</span> / <span id="total-images">32</span>
+            </div>
+        </div>
+    </div>
 
     <footer>
     <p>Society of Manufacturing Engineers - CCSU Student Chapter</p>
