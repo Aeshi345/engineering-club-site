@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,27 +25,43 @@
         </ul>
     </nav>
 
-    <section class="about" > 
+    <section class="event-detail">
+        <h1>SME Technical Talk</h1>
 
-       <h1>SME Techinical Talk</h1>
+        <div class="event-detail-intro">
+            <p>The SME Student Chapter hosts a series of Technical Talk events in which professionals from industry are invited to deliver presentations on emerging and high-impact topics relevant to modern manufacturing and engineering.</p>
+            
+            <p>These talks expose students to current industry trends, technologies, and workforce needs, helping bridge the gap between academic learning and real-world practice. Students consistently value these events, as they provide opportunities to interact directly with industry professionals, ask career-related and technical questions, and build meaningful professional networks.</p>
+            
+            <p>Such engagement enhances students' understanding of potential career paths and prepares them for successful transitions into the workforce. This support directly advances SME's mission by fostering industry–student connections and promoting workforce development.</p>
+        </div>
 
-       <p> 
-        The SME Student Chapter hosts a series of Technical Talk events in which professionals from industry are invited to deliver presentations on emerging 
-        and high-impact topics relevant to modern manufacturing and engineering. These talks expose students to current industry trends, 
-        technologies, and workforce needs, helping bridge the gap between academic learning and real-world practice. Students consistently value these events, 
-        as they provide opportunities to interact directly with industry professionals, ask career-related and technical questions, and build meaningful professional networks. 
-        Such engagement enhances students’ understanding of potential career paths and prepares them for successful transitions into the workforce. 
-        This support directly advances SME’s mission by fostering industry–student connections and promoting workforce development.
-       </p>
+        <div class="event-images">
+            <img src="images/techTalk.png" alt="Technical Talk presentation">
+            <img src="images/SMEtechTalk.png" alt="SME Technical Talk event">
+            <img src="images/techTalk2.jpg" alt="Technical Talk speakers">
+            <img src="images/techTalk3.png" alt="Technical Talk audience">
+        </div>
 
-       <img src = "images/techTalk.png" alt="Engineering Club">
-       <img src = "images/SMEtechTalk.png" alt="Engineering Club">
-       <img src = "images/techTalk2.jpg" alt="Engineering Club">
-       <img src = "images/techTalk3.png" alt="Engineering Club">
+        <a href="events.html" class="event-back-btn">← Back to Events</a>
+    </section>
 
-       <a href="events.html">Back→</a>
-
-        </section>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            
+            <button class="lightbox-nav lightbox-prev">&#10094;</button>
+            
+            <img id="lightbox-image" src="" alt="Gallery Image" class="lightbox-img">
+            
+            <button class="lightbox-nav lightbox-next">&#10095;</button>
+            
+            <div class="lightbox-counter">
+                <span id="current-image">1</span> / <span id="total-images">32</span>
+            </div>
+        </div>
+    </div>
 
     <footer>
     <p>Society of Manufacturing Engineers - CCSU Student Chapter</p>
