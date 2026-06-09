@@ -476,6 +476,13 @@ footer {
     line-height: 1.6;
 }
 
+.galleryImg-wrapper {
+    transition: transform 0.25s ease;
+}
+.galleryImg-wrapper:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
 .eventCards {
     display: flex;
     flex-direction: column;
@@ -506,6 +513,19 @@ footer {
        gap: 60px;
 
     transition: 0.2s;
+}
+
+.eventCard-wrapper {
+    transition: transform 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.eventCard-wrapper {
+    transition: transform 0.3s ease;
+}
+.eventCard-wrapper:hover {
+    transform: translateY(-8px);
 }
 
 .eventInfo {
@@ -613,11 +633,16 @@ footer {
     transition: all 0.3s ease;
     text-align: left;
     position: relative;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-.joinCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.joinCard-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.joinCard-wrapper:hover {
+    transform: translateY(-10px);
 }
 
 .cardIcon {
@@ -754,7 +779,7 @@ section.reveal {
 .videoSection video.reveal.visible,
 section.reveal.visible {
     visibility: visible;
-    animation: revealFade 1s ease-out both;
+    animation: revealFade 1s ease-out forwards;
 }
 
 @keyframes revealFade {
@@ -1011,7 +1036,7 @@ section.reveal.visible {
     border-radius: 16px;
     box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -1048,8 +1073,7 @@ font-size:80px;
 }
 
 .videoSection video {
-    width: 500px;
-    height: 300px;
+    
 
     object-fit: cover;
 

@@ -104,19 +104,24 @@ function setupScrollReveal() {
     void document.documentElement.offsetHeight;
 
     const revealCallback = (entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                requestAnimationFrame(() => {
-                    entry.target.classList.add('visible');
-                });
-                obs.unobserve(entry.target);
-            }
-        });
-    };
-
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            requestAnimationFrame(() => {
+                entry.target.classList.add('visible');
+                entry.target.addEventListener('animationend', () => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.visibility = 'visible';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.remove('reveal', 'visible');
+                }, { once: true });
+            });
+            obs.unobserve(entry.target);
+        }
+    });
+};
     const observer = new IntersectionObserver(revealCallback, {
         root: null,
-        threshold: 0.15,
+        threshold: 0,
         rootMargin: '0px 0px -10% 0px'
     });
 
