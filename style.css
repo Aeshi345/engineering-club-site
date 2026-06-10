@@ -995,7 +995,7 @@ section.reveal.visible {
 
 .event-detail h1 {
     font-size: 64px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     color: #0d3488;
     text-align: center;
     font-weight: 700;
@@ -1066,20 +1066,12 @@ section.reveal.visible {
 .videoSection {
     text-align: center;
     padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .videoSection h1 { 
-font-size:80px;
-}
-
-.videoSection video {
-    
-
-    object-fit: cover;
-
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 75px;
 }
 
 .videoSection a {
@@ -1100,6 +1092,39 @@ font-size:80px;
 
 .videoSection a:hover {
     background-color: #779ff5;
+}
+
+.boxed video,
+video.boxed {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: black;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.videoSection video,
+.videoSection img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 800px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {
