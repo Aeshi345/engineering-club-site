@@ -93,7 +93,7 @@ if (document.readyState !== 'loading') {
 window.addEventListener('pageshow', initPage);
 
 function setupScrollReveal() {
-    const revealElements = document.querySelectorAll('section, .joinCard, .gallery img, .eventCard, .about img, .videoSection video, .event-images img');
+    const revealElements = document.querySelectorAll('section, .joinCard, .gallery img, .eventCard, .about img, .videoSection video, .event-images img, .highlight-card, .highlight-card-special');
     if (!revealElements.length) return;
 
     revealElements.forEach(el => {

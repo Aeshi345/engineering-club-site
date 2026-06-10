@@ -260,7 +260,7 @@ footer {
     margin: 0 auto;
 }
 
-.highlight-card {
+.highlight-card-wrapper {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 40px 28px;
@@ -269,19 +269,19 @@ footer {
     transition: all 0.3s ease;
 }
 
-.highlight-card:hover {
+.highlight-card-wrapper:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
     background: white;
 }
 
-.highlight-card-special {
+.highlight-card-special-wrapper {
     grid-column: 1 / -1;
     justify-self: center;
     max-width: 400px;
 }
 
-.highlight-card-special {
+.highlight-card-special-wrapper {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 40px 28px;
@@ -290,7 +290,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-.highlight-card-special:hover {
+.highlight-card-special-wrapper:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
     background: white;
@@ -785,6 +785,8 @@ footer {
 .joinCard.reveal,
 .about img.reveal,
 .videoSection video.reveal,
+.highlight-card.reveal,
+.highlight-card-special.reveal,
 section.reveal {
     opacity: 0;
     visibility: hidden;
@@ -798,6 +800,8 @@ section.reveal {
 .joinCard.reveal.visible,
 .about img.reveal.visible,
 .videoSection video.reveal.visible,
+.highlight-card.reveal.visible, 
+.highlight-card-special.reveal.visible,
 section.reveal.visible {
     visibility: visible;
     animation: revealFade 1s ease-out forwards;
