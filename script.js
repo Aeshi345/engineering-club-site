@@ -134,6 +134,7 @@ function openLightbox(index) {
 
     const lightbox = document.getElementById('lightbox');
     const totalImagesEl = document.getElementById('total-images');
+    if (!lightbox || !currentImageSet.length) return;
 
     if (totalImagesEl) {
         totalImagesEl.textContent = currentImageSet.length;
@@ -147,6 +148,7 @@ function openLightbox(index) {
 
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
     lightbox.classList.remove('active');
     document.body.style.overflow = 'auto'; // Re-enable scrolling
 }
@@ -154,6 +156,7 @@ function closeLightbox() {
 function updateLightboxImage() {
     const lightboxImg = document.getElementById('lightbox-image');
     const currentImageEl = document.getElementById('current-image');
+    if (!lightboxImg || !currentImageEl || !currentImageSet.length) return;
     
     lightboxImg.src = currentImageSet[currentImageIndex].src;
     currentImageEl.textContent = currentImageIndex + 1;
